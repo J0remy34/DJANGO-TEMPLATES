@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django Templates{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio:iniciov1' %}">Inicio</a></li> 
+            </ul>
+        <nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>
+            &copy; BackEnd Django 2026
+        </p>
+    </footer>
+</body>
+</html>
