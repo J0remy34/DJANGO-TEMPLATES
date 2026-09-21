@@ -1,6 +1,6 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}App1 v1{% endblock %}
-
 {% block content %}
 <h1>Vista 2 app1</h1>
 <p>
@@ -10,4 +10,14 @@
     Laboriosam corporis ex reprehenderit iusto facilis nisi pariatur qui est optio dolorem? Eaque perspiciatis possimus ipsam magnam molestiae iure deserunt recusandae iste porro pariatur quis, beatae ut nisi quibusdam voluptates.
     Earum tempore, accusamus rem ipsam sapiente porro fuga aperiam praesentium voluptatum incidunt, provident quia quasi ratione esse nisi! Voluptatum vitae distinctio accusamus quae animi deserunt quis voluptates dolore, sapiente minima.
 </p>
+<div>
+    <h1>Datos de la persona</h1>
+    <ul>
+        <li>Nombre: {{nombre}}</li>
+        <li>Apellido: {{Apellido}}</li>
+        <li>Edad: {{edad}}</li>
+        <li><img src="{% static 'imagenes/persona.jpg' %}" alt="Imagen de la persona"></li>
+        <li><a href="{% url 'app1:app1v1' %}">Ver perfil 1</a></li>
+    </ul>
+</div>
 {% endblock %}
